@@ -1,12 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Carousel} from 'react-bootstrap';
-import NavFile from '../common/NavFile';
 import './Home.css';
 import Duran from '../assets/IMG/Duran.png';
 import lady from '../assets/IMG/lady.jpg';
 import Queen from '../assets/IMG/queen.jpg';
 import Rolling from '../assets/IMG/RS.png';
+import NavFile from '../common/NavFile';
 
 
 
@@ -42,14 +42,14 @@ import Rolling from '../assets/IMG/RS.png';
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block w-100 h-50"
+      className="d-block w-100"
       src={Queen}
       alt="Third slide"
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>Queen</h3>
+      <p>"Jump on to this marvelous site"</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

@@ -1,4 +1,5 @@
 const RoutePath = {
-    Home: '/home',
+    Home: '/pages/Home',
+    Register: '/pages/Register'
 }
 export default RoutePath;
