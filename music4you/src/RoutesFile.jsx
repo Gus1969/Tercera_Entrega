@@ -1,8 +1,8 @@
-import React from "react";
+import React  from "react";
 import { Routes, Route } from "react-router-dom";
-import RoutePath from "../src/RoutePath";
-import Home from "../src/pages/Home";
-import Register from "../src/pages/Register";
+import RoutePath from "./RoutePath";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 const RoutesFile = () => {
   return ( 
@@ -10,6 +10,7 @@ const RoutesFile = () => {
     <Routes>
       <Route path={RoutePath.Home} element={<Home />} />
       <Route path={RoutePath.Register} element={<Register />} />
+    
     </Routes>
   </>
   )

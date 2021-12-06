@@ -10,11 +10,11 @@ import NavFile from '../common/NavFile';
 
 
 
+
  const Home = () => {
      return (
        <>
        <NavFile />
-       
       <Container>
         <Carousel fade className="Carousel">
   <Carousel.Item>
