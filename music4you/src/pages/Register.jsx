@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Register.css";
 import NavFile from "../common/NavFile";
 
-function Register() {
+
+const Register =() => {
   const [fullName, setFullName] = useState("");
   const [fullNameError, setFullNameError] = useState("");
 
@@ -16,6 +17,7 @@ function Register() {
 
   const [confirm, setConfirm] = useState("");
   const [confirmError, setConfirmError] = useState("");
+
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleFullNameChange = (e) => {
@@ -55,9 +57,9 @@ function Register() {
     const RegEx = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
     if (RegEx.test(email)) {
       setEmailError("");
-      if (email === "admin@demo.com") {
+      if (email === "gustavo@demo.com") {
         setEmailError("");
-        if (password === "demo") {
+        if (password === "123") {
           setSuccessMessage("Welcome!");
         }
       } else {
@@ -73,7 +75,7 @@ function Register() {
   } else {
     setPasswordError("Enter your password");
   }
-  if (confirm !== "" || confirm !== password) {
+  if (confirm === password) {
     setConfirm("");
   } else {
     setConfirmError("The password does not match");
@@ -95,18 +97,18 @@ function Register() {
         <Row className="row">
           <Col>
           
-            <Form className="form">
+            <Form className="form" autocomplete="off" onSubmit={handleSubmission}>
               <Form.Group className="mb-3" controlId="formBasicUsert">
                 <Form.Label className="label"> Full Name </Form.Label>
                 <Form.Control
+                  value={fullName}
+                  onChange={e => handleFullNameChange(setFullName)}
+                  placeholder="Your name"
                   className="input"
                   type="text"
                   name="fullname"
-                  placeholder="Your name"
-                  onChange={handleFullNameChange}
-                  value={fullName}
+                  required
                 />
-
                 <br />
                 {fullNameError && (
                   <div className="error-msg"> {fullNameError} </div>
@@ -116,13 +118,13 @@ function Register() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label className="label">Email address</Form.Label>
                 <Form.Control
-                  className="input"
-                  type="email"
-                  name="email"
-                  placeholder="Enter email"
-                  onChange={handleEmailChange}
-                  value={email}
-                />
+                className="input"
+                    onChange={e => handleEmailChange(setEmail)} value={email}
+                    placeholder="Email address"
+                    type="email"
+                    name="email"
+                    required
+                  />
                 <br />
                 {emailError && <div className="error-msg"> {emailError} </div>}
               </Form.Group>
@@ -130,13 +132,14 @@ function Register() {
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label className="label">Password</Form.Label>
                 <Form.Control
-                  className="input"
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  onChange={handlePasswordChange}
-                  value={password}
-                />
+                className="input"
+              value={password}
+              onChange={e => handlePasswordChange(setPassword)}
+              placeholder="Password"
+              type="password"
+              name="password"
+              required
+            />
                 <br />
                 {passwordError && (
                   <div className="error-msg"> {passwordError} </div>
@@ -145,13 +148,14 @@ function Register() {
               <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                 <Form.Label className="label">Retype your Password</Form.Label>
                 <Form.Control
-                  className="input"
-                  type="password"
-                  placeholder="Password"
-                  name="confirm"
-                  onChange={handleConfirmChange}
-                  value={confirm}
-                />
+                className=" input"
+                    value={confirm}
+                    onChange={e => handleConfirmChange(setConfirm)}
+                    placeholder="Password"
+                    type="password"
+                    name="confirm"
+                    required
+                  />
 
                 {confirmError && (
                   <div className="error-msg"> {confirmError} </div>
@@ -161,7 +165,7 @@ function Register() {
               <Button
                 type="submit"
                 className="submit"
-                onSubmit={handleSubmission}
+                
               >
                 Submit
               </Button>

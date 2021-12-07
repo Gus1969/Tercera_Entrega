@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-
 import { Container, Navbar, Nav, Modal, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -50,9 +49,10 @@ const NavFile = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+
       <Navbar collapseOnSelect expand="lg" className="Navigation">
         <Container>
-          <Navbar.Brand className="content" as={Link} to={"../pages/Home"}>
+          <Navbar.Brand className="content" as={Link} to={"/"}>
             {" "}
             Music<span>4</span>You
           </Navbar.Brand>{" "}
