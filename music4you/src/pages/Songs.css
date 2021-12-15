@@ -1,0 +1,5 @@
+.posting {
+    display: flex;
+    flex-direction:row;
+    padding: 10px 10px;
+}
