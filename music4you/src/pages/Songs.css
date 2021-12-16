@@ -1,5 +1,8 @@
-.posting {
-    display: flex;
-    flex-direction:row;
-    padding: 10px 10px;
+ .posting {
+    display:flex;
+flex-wrap:wrap;
+  flex-direction:row;
+ width:100%;
+
 }
+     

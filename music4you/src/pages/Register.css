@@ -1,108 +1,48 @@
+
 * {
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
 }
-.contenedor {
-   
-    margin-top: 70px;
-    min-height: 700px;
-    border: none;
-    background-color: rgb(0, 153, 255);
+
+  
+.wrapper {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
-.contenedor .Title {
+
+.form-title {
     text-align: center;
-    margin: 60px 0;
 }
-
-.form {
-    border: 2px solid black;
-    width: 100%;
-    padding: 80px 60px 30px 60px;
-    margin: 30px 0 30px 0;
-    
-}
-.row {
-    width: 50%;
-    margin: auto;
-}
-.label {
-    color: #fff;
-    font-weight: 700;
-}
-.input {
-    color: black;
-    background: transparent;
-    outline: none;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5%;
-    
-}
-
-.submit {
+.btn {
     display: flex;
     text-transform: uppercase;
-    font-size: 22px;
-    border-radius: 25px;
-    color: white;
-    font-weight: 700;
-    padding: 8px 40px;
-    background: linear-gradient(to right, blue, lightblue);
-    box-shadow: rgba(0, 0,0.0, 0.3) 0px 18px 39px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    margin: 50px auto;
-    outline: none;
-    cursor: pointer;
-    /* transition: all 0.5s; */
-
-}
-.error-msg {
-    color: red;
-    font-size: 20px;
-    width: 120px;
-}
-.success-msg {
-    background-color: #0f834d;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    padding: 50px;
-
-}
-@media screen and (max-width: 900px) {
-    .submit {
-        display: flex;
-    text-transform: uppercase;
-    font-size: 19px;
+    font-size: 18px;
     border-radius: 20px;
     color: white;
+    font-weight: 700;
+    padding: 8px 30px;
+    background: linear-gradient(to right, blue, lightblue);
+    box-shadow: rgba(0, 0,0.0, 0.3) 0px 18px 39px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 10px auto;
+    outline: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 778px) {
+    .btn {
+        font-size: 14px;
+    border-radius: 15px;
     padding: 8px 20px;
-    background: linear-gradient(to right, blue, lightblue);
-    box-shadow: rgba(0, 0,0.0, 0.3) 0px 18px 39px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    margin: 50px auto;
-    outline: none;
-    cursor: pointer;
 
     }
-}
-@media screen and (max-width: 700px) {
-    .submit {
-        display: flex;
-    text-transform: uppercase;
-    font-size: 15px;
-    border-radius: 16px;
-    color: white;
-    padding: 8px 15px;
-    background: linear-gradient(to right, blue, lightblue);
-    box-shadow: rgba(0, 0,0.0, 0.3) 0px 18px 39px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    margin: 50px auto;
-    outline: none;
-    cursor: pointer;
 
-    }
 }
+.form-group p {
+    color: red;
+    font-size: 20px;
+}
+
+
 
 
 

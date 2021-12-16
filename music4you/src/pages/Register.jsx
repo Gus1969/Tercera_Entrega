@@ -1,179 +1,72 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Register.css";
-import NavFile from "../common/NavFile";
+
+import React from 'react';
+import '../pages/Register.css'
+import NavFile from '../common/NavFile';
+import { Container} from 'react-bootstrap';
+import Footer from '../common/Footer';
+import Register_validation from '../Register_validation';
+import Validate from '../Validation';
+
+const Register = () => {
+  const {handleChange, values, handleSubmit, errors} = Register_validation(Validate);
 
 
-const Register =() => {
-  const [fullName, setFullName] = useState("");
-  const [fullNameError, setFullNameError] = useState("");
-
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-
-  const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-
-  const [confirm, setConfirm] = useState("");
-  const [confirmError, setConfirmError] = useState("");
-
-  const [successMessage, setSuccessMessage] = useState("");
-
-  const handleFullNameChange = (e) => {
-    setSuccessMessage("");
-    setFullName(e.target.value);
-    setFullNameError("");
-  };
-  const handleEmailChange = (e) => {
-    setSuccessMessage("");
-    setEmail(e.target.value);
-    setEmailError("");
-  };
-  const handlePasswordChange = (e) => {
-    setSuccessMessage("");
-    setPassword(e.target.value);
-    setPasswordError("");
-  };
-  const handleConfirmChange = (e) => {
-    setSuccessMessage("");
-    setConfirm(e.target.value);
-    setConfirmError("");
-  };
-  const handleSubmission = (e) => {
-    e.preventDefault();
-  };
-  if (fullName !== "") {
-    setFullName("");
-  } else {
-    setFullNameError("Please enter your name");
-  }
-  if (fullName !== "") {
-    setFullName("");
-  } else {
-    setFullNameError("Your full name is required");
-  }
-  if (email !== "") {
-    const RegEx = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
-    if (RegEx.test(email)) {
-      setEmailError("");
-      if (email === "gustavo@demo.com") {
-        setEmailError("");
-        if (password === "123") {
-          setSuccessMessage("Welcome!");
-        }
-      } else {
-        setEmailError("");
-      }
-    } else {
-      setEmailError("Invalid email");
-    }
-  } else {
-    setEmailError("Email is required");
-  }
-  if (password !== "") {
-  } else {
-    setPasswordError("Enter your password");
-  }
-  if (confirm === password) {
-    setConfirm("");
-  } else {
-    setConfirmError("The password does not match");
-  }
 
   return (
-    <>
-      <NavFile />
+    <div>
+      <NavFile/>
+      <Container className="wrapper">
+        <div className="row g-3">
+          <div className="col-lg-12 md-12 sm-12">
+       <form onSubmit={handleSubmit}>
+          <h3 className="form-title">User Registration</h3>
 
-      <Container className="contenedor">
-        <Row className="row">
-          <Col>
-            <h1 className="Title"> User Registration</h1>
-          </Col>
-          {successMessage && (
-            <div className="success-msg">{successMessage} </div>
-          )}
-        </Row>
-        <Row className="row">
-          <Col>
-          
-            <Form className="form" autocomplete="off" onSubmit={handleSubmission}>
-              <Form.Group className="mb-3" controlId="formBasicUsert">
-                <Form.Label className="label"> Full Name </Form.Label>
-                <Form.Control
-                  value={fullName}
-                  onChange={e => handleFullNameChange(setFullName)}
-                  placeholder="Your name"
-                  className="input"
-                  type="text"
-                  name="fullname"
-                  required
-                />
-                <br />
-                {fullNameError && (
-                  <div className="error-msg"> {fullNameError} </div>
-                )}
-              </Form.Group>
+          <div className="form-group p-3">
+              <label>First name</label>
+              <input type="text" name='nombre' className="form-control" placeholder="First name" value={values.name} onChange={handleChange}/>
+              {errors?.name && <p>{errors.name}</p>}
+          </div>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className="label">Email address</Form.Label>
-                <Form.Control
-                className="input"
-                    onChange={e => handleEmailChange(setEmail)} value={email}
-                    placeholder="Email address"
-                    type="email"
-                    name="email"
-                    required
-                  />
-                <br />
-                {emailError && <div className="error-msg"> {emailError} </div>}
-              </Form.Group>
+          <div className="form-group p-3">
+              <label>Last name</label>
+              <input type="text" name="last" className="form-control" placeholder="Last name" value={values.last} onChange={handleChange} />
+              {errors?.last && <p>{errors.last}</p>}
+          </div>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label className="label">Password</Form.Label>
-                <Form.Control
-                className="input"
-              value={password}
-              onChange={e => handlePasswordChange(setPassword)}
-              placeholder="Password"
-              type="password"
-              name="password"
-              required
-            />
-                <br />
-                {passwordError && (
-                  <div className="error-msg"> {passwordError} </div>
-                )}
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
-                <Form.Label className="label">Retype your Password</Form.Label>
-                <Form.Control
-                className=" input"
-                    value={confirm}
-                    onChange={e => handleConfirmChange(setConfirm)}
-                    placeholder="Password"
-                    type="password"
-                    name="confirm"
-                    required
-                  />
+          <div className="form-group p-3">
+              <label>Email address</label>
+              <input type="email" name="email" className="form-control" placeholder="Enter email" value={values.email}  onChange={handleChange} />
+              {errors?.email && <p>{errors.email}</p>}
+          </div>
 
-                {confirmError && (
-                  <div className="error-msg"> {confirmError} </div>
-                )}
-              </Form.Group>
-
-              <Button
-                type="submit"
-                className="submit"
-                
-              >
-                Submit
-              </Button>
-            </Form>
-          </Col>
-        </Row>
+          <div className="form-group p-3">
+              <label>Password</label>
+              <input type="password" name="password" className="form-control" placeholder="Enter password" value={values.password} onChange={handleChange} />
+              {errors?.password && <p>{errors.password}</p>}
+          </div>
+          <div className="form-group p-3">
+              <label>Confirm Password</label>
+              <input type="password" name="confirm" className="form-control" placeholder="Enter password" value={values.confirm} onChange={handleChange} />
+              {errors?.confirm && <p>{errors.confirm}</p>}
+          </div>
+            <div className="d-flex justify-content-center align-items-center">
+          <button type="submit" className="btn btn-primary">Sign Up</button>
+          </div>
+          <div className=" d-flex justify-content-flex-end">
+            Already have an account? Log in <a href="../pages/Login">here</a>
+          </div>
+        
+      </form>
+      </div>
+      </div>
+      
       </Container>
-    </>
-  );
+      <Footer/>
+      
+    </div>
+  )
 }
-export default Register;
+
+export default Register
+
+

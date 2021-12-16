@@ -7,6 +7,7 @@ import lady from '../assets/IMG/lady.jpg';
 import Queen from '../assets/IMG/queen.jpg';
 import Rolling from '../assets/IMG/RS.png';
 import NavFile from '../common/NavFile';
+import Footer from '../common/Footer';
 
 
 
@@ -65,6 +66,7 @@ import NavFile from '../common/NavFile';
   </Carousel.Item>
 </Carousel>
 </Container>
+<Footer/>
 </>
 
      )
