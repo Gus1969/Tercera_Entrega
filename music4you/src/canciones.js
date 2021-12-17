@@ -1,4 +1,4 @@
-	 import Boney from './assets/IMG/Boney.png';
+	 
 	 import Donna from './assets/IMG/donna.png';
 	 import Duran from './assets/IMG/Duran.png';
 	 import Falco from "./assets/IMG/slider1.png";

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 const Register_validation = (Validate) => {
   const [values, setValues] = useState({
