@@ -1,8 +1,47 @@
- .posting {
-    display:flex;
-flex-wrap:wrap;
-  flex-direction:row;
- width:100%;
+.grid {
+  min-height: 100%;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 100px auto;
+}
+.card {
+  flex-basis: calc(33%, 40px);
+  margin: 30px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 18px 20px -5px rgba(0,3,0,0.9);
+  width: 33%;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+     
+.audio {
+  display: block;
+  border-radius: 1px 1px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 
 }
-     
