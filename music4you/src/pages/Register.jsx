@@ -24,30 +24,30 @@ const Register = () => {
           <div className="form-group p-3">
               <label>First name</label>
               <input type="text" name='nombre' className="form-control" placeholder="First name" value={values.name} onChange={handleChange}/>
-              {errors?.name && <p>{errors.name}</p>}
+              {errors.name && <p>{errors.name}</p>}
           </div>
 
           <div className="form-group p-3">
               <label>Last name</label>
               <input type="text" name="last" className="form-control" placeholder="Last name" value={values.last} onChange={handleChange} />
-              {errors?.last && <p>{errors.last}</p>}
+              {errors.last && <p>{errors.last}</p>}
           </div>
 
           <div className="form-group p-3">
               <label>Email address</label>
               <input type="email" name="email" className="form-control" placeholder="Enter email" value={values.email}  onChange={handleChange} />
-              {errors?.email && <p>{errors.email}</p>}
+              {errors.email && <p>{errors.email}</p>}
           </div>
 
           <div className="form-group p-3">
               <label>Password</label>
               <input type="password" name="password" className="form-control" placeholder="Enter password" value={values.password} onChange={handleChange} />
-              {errors?.password && <p>{errors.password}</p>}
+              {errors.password && <p>{errors.password}</p>}
           </div>
           <div className="form-group p-3">
               <label>Confirm Password</label>
               <input type="password" name="confirm" className="form-control" placeholder="Enter password" value={values.confirm} onChange={handleChange} />
-              {errors?.confirm && <p>{errors.confirm}</p>}
+              {errors.confirm && <p>{errors.confirm}</p>}
           </div>
             <div className="d-flex justify-content-center align-items-center">
           <button type="submit" className="btn btn-primary">Sign Up</button>

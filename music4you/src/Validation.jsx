@@ -1,4 +1,4 @@
- function Validate(values)  {
+ function Validation(values)  {
     let errors = {};
 
     if(!values.name.trim()){
@@ -27,6 +27,7 @@
 else if(values.confirm !== values.password) {
     errors.confirm = "Passwords do not match";
 }
+return errors;
 }
-export default Validate;
+export default Validation;
 

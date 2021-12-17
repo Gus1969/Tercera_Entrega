@@ -1,10 +1,12 @@
+	 import Boney from './assets/IMG/Boney.png';
+	 
 
-	[ 
+	const canciones =  [ 
 		{
 			"id" : 1,
 			"nombre": "One night in Bangkok",
 			"ruta": "./assets/songs/Boney M",
-			"icono": "./assets/IMG/Boney.png",
+			"icono": Boney,
 			"artista": "Boney M",
 			"reproducciones": 15
 		},
@@ -75,4 +77,6 @@
 			"reproducciones": 20
 		}
 	]
+	export default canciones; 
+	
 

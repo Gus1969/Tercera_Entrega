@@ -1,30 +1,30 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
+const Register_validation = (Validate) => {
+  const [values, setValues] = useState({
+    name: "",
+    last: "",
+    email: "",
+    password: "",
+    confirm: "",
+  });
+  const [errors, setErrors] = useState({});
 
-const Register_validation = Validate => {
-    const [values, setValues] = useState ({
-        name: '',
-        last: '',
-        email: '',
-        password: '',
-        confirm: ''
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
     });
-    const [errors, setErrors] = useState({});
+  };
 
-    const handleChange = e => {
-        const {name, value} = e.target
-        setValues({
-            ...values,
-            [name]: value
-         });
-        };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errorResult = Validate(values);
+    console.log('Hola', errorResult);
 
-         const handleSubmit = e => {
-             e.preventDefault();
-
-             setErrors(Validate(values));
-        
-    }
-    return {handleChange, values, handleSubmit, errors};
-}
- export default Register_validation;
+    setErrors(errorResult);
+  };
+  return { handleChange, values, handleSubmit, errors };
+};
+export default Register_validation;

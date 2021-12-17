@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Image  } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import canciones from "../canciones.json";
+import canciones from "../canciones";
 import "./Songs.css";
 import Footer from "../common/Footer";
 
