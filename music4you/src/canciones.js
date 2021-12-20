@@ -1,5 +1,5 @@
 	 
-	 import Donna from './assets/IMG/donna.png';
+	 import Donna from './assets/IMG/donna.jpg';
 	 import Duran from './assets/IMG/Duran.png';
 	 import Falco from "./assets/IMG/slider1.png";
 	 import Lady from "./assets/IMG/LG1.png";

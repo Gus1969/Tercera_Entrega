@@ -1,5 +1,5 @@
  function Validation(values)  {
-    let errors = {};
+    let errors = [];
 
     if(!values.name.trim()){
         errors.name = "Enter your name please";
@@ -11,7 +11,7 @@
 
     if(!values.email) {
         errors.email = "Your email is required";
-    } else if(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(values.email)) { 
+    } else if(!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values.email)) { 
         errors.email = "Invalid email address";
 }
 

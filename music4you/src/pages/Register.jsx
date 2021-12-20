@@ -23,7 +23,7 @@ const Register = () => {
 
           <div className="form-group p-3">
               <label>First name</label>
-              <input type="text" name='nombre' className="form-control" placeholder="First name" value={values.name} onChange={handleChange}/>
+              <input type="text" name='name' className="form-control" placeholder="First name" value={values.name} onChange={handleChange}/>
               {errors.name && <p>{errors.name}</p>}
           </div>
 

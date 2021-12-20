@@ -1,47 +1,62 @@
 import React from 'react';
-import { Container, Button, Form } from "react-bootstrap";
 import Footer from '../common/Footer';
 import NavFile from '../common/NavFile';
-import './Login.css'
+import { Container } from 'react-bootstrap';
+import './Login.css';
+import LoginValidation from '../LoginValidation';
+import SetLoginErrors from '../SetLoginErrors';
+
 
 const Login = () => {
+  const {changer, values, Submit, errores} = LoginValidation(SetLoginErrors);
    
     return (
-        <div>
+        <>
             <NavFile/>
             <Container className="form-wrapper">
             <div className="row g-3">
           <div className="col-lg-12 md-12 sm-12">
-            <Form className="Form">
+            <form className="Form" onSubmit={Submit}>
             <h3 className="login-title">Login</h3>
-            <Form.Group className="mb-3" controlId="formBasicUsert">
-              <Form.Label className="label"> Full Name </Form.Label>
-              <Form.Control
-                className="Input"
-                type="text"
-                name="fullname"
-                placeholder="Your name"
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label className="label">Email address</Form.Label>
-              <Form.Control
-                className="input"
-                type="email"
-                name="email"
+              <div className="form-group p-3">
+              <label className="label">Email address</label>
+              <input
+              className="form-control"
+                type='email'
+                name='email'
                 placeholder="Enter email"
+                value={values.email}  onChange={changer} 
               />
-            </Form.Group>
-            <Button variant="primary" className="login-btn">
+            </div>
+            {errores.email && <p>{errores.email}</p>}
+            
+            
+            <div className="form-group p-3">
+              <label className="label">Password</label>
+              <input
+              className="form-control"
+                type='password'
+                name='password'
+                placeholder="Your password"
+                value={values.password}  onChange={changer} 
+              />
+            </div>
+            {errores.password && <p>{errores.password}</p>}
+            
+            
+            <button className="btn btn-primary login-btn">
             Login
-          </Button>
-          </Form>
+          </button>
+          </form>
           </div>
           </div>
           </Container>
+          
+        
           <Footer/>
             
-        </div>
+      
+        </>
     )
 }
 
