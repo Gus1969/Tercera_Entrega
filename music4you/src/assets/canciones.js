@@ -1,23 +1,23 @@
 	 
-	 import Donna from './assets/IMG/donna.jpg';
-	 import Duran from './assets/IMG/Duran.png';
-	 import Falco from "./assets/IMG/slider1.png";
-	 import Lady from "./assets/IMG/LG1.png";
-	 import Mick from "./assets/IMG/mick.jpg";
-	 import Queen from "./assets/IMG/Queen1.png";
-	 import Boney2 from "./assets/IMG/Boney.png";
-	 import Boney3 from "./assets/IMG/logo.png";
+	 import Donna from '../assets/IMG/donna.png';
+	 import Duran from '../assets/IMG/Duran.png';
+	 import Falco from "../assets/IMG/slider1.png";
+	 import Lady from "../assets/IMG/LG1.png";
+	 import Mick from "../assets/IMG/mick.jpg";
+	 import Queen from "../assets/IMG/Queen1.png";
+	 import Boney2 from "../assets/IMG/Boney.png";
+	 import Boney3 from "../assets/IMG/logo.png";
 
 	 //audio
-	 import Wild from "./assets/songs/wild.mp3";
-	 import love from "./assets/songs/donna.mp3";
-	 import Rio from "./assets/songs/rio.mp3";
-	 import commisser from "./assets/songs/falco.mp3";
-	 import Poker from  "./assets/songs/lg.mp3";
-	 import Streets from "./assets/songs/mick.mp3";
-	 import Radio from "./assets/songs/queen.mp3";
-	 import Rasputin from "./assets/songs/Raspu.mp3";
-	 import Babilon from "./assets/songs/rivers.mp3";
+	 import Wild from "../assets/songs/wild.mp3";
+	 import love from "../assets/songs/donna.mp3";
+	 import Rio from "../assets/songs/rio.mp3";
+	 import commisser from "../assets/songs/falco.mp3";
+	 import Poker from  "../assets/songs/lg.mp3";
+	 import Streets from "../assets/songs/mick.mp3";
+	 import Radio from "../assets/songs/queen.mp3";
+	 import Rasputin from "../assets/songs/Raspu.mp3";
+	 import Babilon from "../assets/songs/rivers.mp3";
 	 
 
 	const canciones =  [ 

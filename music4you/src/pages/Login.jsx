@@ -3,8 +3,8 @@ import Footer from "../common/Footer";
 import NavFile from "../common/NavFile";
 import { Container } from "react-bootstrap";
 import "./Login.css";
-import LoginValidation from "../LoginValidation";
-import SetLoginErrors from "../SetLoginErrors";
+import LoginValidation from "../validation/LoginValidation";
+import SetLoginErrors from "../validation/SetLoginErrors";
 
 const Login = () => {
   const { changer, values, Submit, errores } = LoginValidation(SetLoginErrors);

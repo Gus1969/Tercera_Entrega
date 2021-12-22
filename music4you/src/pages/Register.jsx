@@ -4,8 +4,8 @@ import '../pages/Register.css'
 import NavFile from '../common/NavFile';
 import { Container} from 'react-bootstrap';
 import Footer from '../common/Footer';
-import Register_validation from '../Register_validation';
-import Validate from '../Validation';
+import Register_validation from '../validation/Register_validation';
+import Validate from '../validation/Validation';
 
 const Register = () => {
   const {handleChange, values, handleSubmit, errors} = Register_validation(Validate);

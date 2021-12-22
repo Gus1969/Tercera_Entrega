@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import canciones from "../canciones";
+import canciones from "../assets/canciones";
 import NavFile from "../common/NavFile";
 import Footer from "../common/Footer";
 import "./Songs.css";

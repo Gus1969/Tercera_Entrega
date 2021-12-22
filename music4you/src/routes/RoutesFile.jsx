@@ -1,10 +1,10 @@
 import React  from "react";
 import { Routes, Route } from "react-router-dom";
 import RoutePath from "./RoutePath";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
-import Songs from "./pages/Songs";
-import Login from "./pages/Login";
+import Home from "../pages/Home";
+import Register from "../pages/Register";
+import Songs from "../pages/Songs";
+import Login from "../pages/Login";
 
 const RoutesFile = () => {
   return ( 
