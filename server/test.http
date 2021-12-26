@@ -1,0 +1,11 @@
+POST http://localhost/3000/bridge/register
+Content-Type: application/json
+
+{
+    "name": "Gustavo",
+    "last": "Ubal",
+    "email": "Gustavo@admin.com",
+    "password": "12345abcd",
+    "confirm": "12345abcd"
+
+}
